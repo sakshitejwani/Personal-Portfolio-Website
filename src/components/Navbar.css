@@ -1,18 +1,3 @@
-/* =========================================
-   NAVBAR STYLES — Navbar.css
-
-   DESKTOP (> 768px):
-   - Logo on the LEFT
-   - Nav links CENTERED (absolute positioning trick)
-   - Resume + theme toggle on the RIGHT
-   - Hamburger hidden
-
-   MOBILE (≤ 768px):
-   - Logo on left, hamburger on right
-   - Nav links and Resume button hidden
-   - Mobile dropdown slides down when open
-   ========================================= */
-
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -55,9 +40,7 @@
   background-color: white;
 }
 
-/* ── Desktop nav links — CENTERED ──
-   We use position:absolute + left:50% + translateX(-50%)
-   to perfectly center the links regardless of logo/button widths */
+/* ── Desktop nav links — CENTERED ── */
 .navbar-links {
   display: flex;
   gap: 2.5rem;

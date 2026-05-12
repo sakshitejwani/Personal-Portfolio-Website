@@ -1,17 +1,3 @@
-// =========================================
-// Navbar.jsx — Top navigation bar
-//
-// DESKTOP: Logo on left, nav links CENTERED,
-//          Resume + theme toggle on right.
-//
-// MOBILE:  Logo on left, hamburger on right.
-//          No changes to mobile burger menu.
-//
-// LOGO SWITCHING:
-// light mode → light_logo.png (dark colored logo)
-// dark mode  → dark_logo.png  (glowing teal logo)
-// =========================================
-
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 

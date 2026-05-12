@@ -1,11 +1,3 @@
-// =========================================
-// Hero.jsx — Landing / Hero section
-//
-// The first thing visitors see:
-// your name, role, description, CTA buttons,
-// and 4 stat cards below.
-// =========================================
-
 import './Hero.css';
 
 function Hero() {

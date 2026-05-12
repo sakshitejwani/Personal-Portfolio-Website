@@ -1,18 +1,6 @@
-// =========================================
-// Skills.jsx — Expertise / Skills section
-//
-// Renders a grid of skill category cards.
-// Each card has an icon, a category name,
-// and a list of technology tags.
-//
-// TO ADD/REMOVE SKILLS:
-// Edit the `skillCategories` array below.
-// =========================================
-
 import './Skills.css';
 
-// ---- Data — your skills organized by category ----
-// Each object has: icon, category name, and list of skills
+
 const skillCategories = [
   {
     icon: '💻',

@@ -1,14 +1,3 @@
-// =========================================
-// Experience.jsx — Work Experience section
-//
-// Timeline-style layout showing your jobs.
-// Each job is a card with title, company,
-// date, and bullet points.
-//
-// TO ADD A NEW JOB: Copy one of the objects
-// in the `experiences` array and update it.
-// =========================================
-
 import './Experience.css';
 
 // ---- Data — your work experiences ----

@@ -1,13 +1,3 @@
-// =========================================
-// Projects.jsx — Projects section
-//
-// Shows a featured project at the top,
-// then a grid of regular project cards.
-//
-// TO ADD A PROJECT: Add an object to the
-// `projects` array below.
-// =========================================
-
 import './Projects.css';
 
 // ---- Data — your projects ----

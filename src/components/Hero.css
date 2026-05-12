@@ -1,9 +1,3 @@
-/* =========================================
-   HERO STYLES — Hero.css
-   Full-screen hero with dark image background,
-   your name, title, and CTA buttons.
-   ========================================= */
-
 .hero {
   /* Space at top so content isn't hidden behind the fixed navbar */
   padding-top: 80px;

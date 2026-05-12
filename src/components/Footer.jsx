@@ -1,7 +1,3 @@
-// =========================================
-// Footer.jsx — Simple footer at the bottom
-// =========================================
-
 function Footer() {
   // Get the current year automatically
   const year = new Date().getFullYear();

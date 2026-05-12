@@ -1,41 +1,13 @@
-// =========================================
-// Contact.jsx — Contact section
-//
-// Two-column layout:
-// Left : your contact info links
-// Right: message form powered by EmailJS
-//
-// HOW EMAILJS WORKS (free, no backend needed):
-// When the user submits the form, EmailJS
-// sends an email directly from the browser
-// to your inbox — no server required.
-//
-// ── SETUP STEPS (do this once) ──
-// 1. Go to https://www.emailjs.com and sign up free
-// 2. Add an Email Service (Gmail recommended)
-//    → Copy your Service ID
-// 3. Create an Email Template
-//    → Use these variables in the template body:
-//       {{from_name}}  {{from_email}}
-//       {{subject}}    {{message}}
-//    → Copy your Template ID
-// 4. Go to Account → API Keys → copy your Public Key
-// 5. Paste all three values below where it says
-//    "REPLACE WITH YOUR..."
-// ==========================================
-
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-// ── PASTE YOUR EMAILJS KEYS HERE ──────────
 const EMAILJS_SERVICE_ID  = 'service_ine33ie';   
 const EMAILJS_TEMPLATE_ID = 'template_0rf68qe';  
 const EMAILJS_PUBLIC_KEY  = 'Pp0KE_T7Ui6incZWM';   
-// ──────────────────────────────────────────
 
-// ---- GitHub SVG icon component ----
-// A proper GitHub logo as an SVG — cleaner than an emoji
+
+
 function GitHubIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -169,12 +141,6 @@ function Contact() {
           <div className="contact-form-card">
             <h3 className="contact-form-title">Send a Message</h3>
 
-            {/*
-              ref={formRef} connects this form to EmailJS.
-              The `name` attributes on each input MUST match
-              the variable names in your EmailJS template:
-              {{from_name}}, {{from_email}}, {{subject}}, {{message}}
-            */}
             <form ref={formRef} onSubmit={handleSubmit}>
 
               {/* Name + Email side by side */}
@@ -183,7 +149,7 @@ function Contact() {
                   <label>Name <span>*</span></label>
                   <input
                     type="text"
-                    name="from_name"         // Must match {{from_name}} in EmailJS template
+                    name="from_name"         
                     placeholder="Your name"
                     required
                   />
@@ -192,7 +158,7 @@ function Contact() {
                   <label>Email <span>*</span></label>
                   <input
                     type="email"
-                    name="from_email"        // Must match {{from_email}} in EmailJS template
+                    name="from_email"        
                     placeholder="your@email.com"
                     required
                   />
@@ -203,7 +169,7 @@ function Contact() {
               <div className="form-group">
                 <label>Message <span>*</span></label>
                 <textarea
-                  name="message"             // Must match {{message}} in EmailJS template
+                  name="message"             
                   placeholder="Tell me about your project or just say hello..."
                   required
                 />

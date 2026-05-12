@@ -1,9 +1,3 @@
-/* =========================================
-   SKILLS STYLES — Skills.css
-   Grid of skill category cards, each with
-   a list of technology tags.
-   ========================================= */
-
 .skills {
   background: var(--bg-gray);
 }

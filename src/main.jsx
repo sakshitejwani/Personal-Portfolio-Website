@@ -1,13 +1,3 @@
-// =========================================
-// main.jsx — React Entry Point
-//
-// This is the very first file React runs.
-// It mounts your App component into the
-// HTML page (index.html).
-//
-// You almost never need to edit this file.
-// =========================================
-
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';

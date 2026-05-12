@@ -1,10 +1,3 @@
-// =========================================
-// About.jsx — About Me section
-//
-// Shows role pills, a photo (or placeholder),
-// your bio paragraph, and education cards.
-// =========================================
-
 import './About.css';
 
 function About() {
@@ -36,12 +29,11 @@ function About() {
           ))}
         </div>
 
-        {/* Two-column: photo + text */}
         <div className="about-grid">
 
           {/* LEFT — Photo */}
           <div className="about-photo-wrap">
-            {/* Your passport photo from /public/assets/passport_size_pic.jpg */}
+
             <img
               src="/assets/passport_size_pic.jpg"
               alt="Sakshi Tejwani"
@@ -52,7 +44,6 @@ function About() {
           <div>
             <h3 className="about-heading">About <span>Me</span></h3>
 
-            {/* Bio paragraph — pulled from your resume summary */}
             <p className="about-bio">
               I am a detail-oriented Computer Science engineer with 2+ years of experience
               building scalable, high-performance backend systems at HSBC Bank. I specialize

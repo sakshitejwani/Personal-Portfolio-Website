@@ -1,9 +1,3 @@
-/* =========================================
-   ABOUT STYLES — About.css
-   Two-column layout: photo on left,
-   bio text + role pills on right.
-   ========================================= */
-
 .about {
   background: var(--bg);
 }
