@@ -17,7 +17,7 @@ const projects = [
     description:
       'A fully responsive personal portfolio website built from scratch using React. Designed to showcase my skills, experience, and projects to potential employers and collaborators.',
     tech: ['React.js', 'CSS3', 'HTML5', 'Vite', 'EmailJS'],
-    github: 'https://github.com/sakshitejwani/Personal-Portfolio',
+    github: 'https://github.com/sakshitejwani/Personal-Portfolio-Website',
     demo: null,
   },
   {
