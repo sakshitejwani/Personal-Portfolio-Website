@@ -1,0 +1,124 @@
+/* =========================================
+   EXPERIENCE STYLES — Experience.css
+   Timeline-style layout with a vertical
+   line and cards for each job.
+   ========================================= */
+
+.experience {
+  background: var(--bg);
+}
+
+/* Wrapper that creates the vertical timeline line */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* The vertical blue line on the left */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+/* Each timeline item (job) */
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Blue dot on the timeline line */
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;        /* Align with the line */
+  top: 1.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* The job card */
+.exp-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+/* Job title + date row */
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.exp-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Blue pill showing the date range */
+.exp-date {
+  font-size: 0.78rem;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Company name row */
+.exp-company-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.exp-company {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.exp-type {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+/* Job description paragraph */
+.exp-desc {
+  color: var(--text-mid);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Achievements heading */
+.exp-achievements-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Bullet list of achievements */
+.exp-achievements {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.exp-achievements li {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}

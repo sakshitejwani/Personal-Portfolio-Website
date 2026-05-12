@@ -1,0 +1,85 @@
+/* =========================================
+   SKILLS STYLES — Skills.css
+   Grid of skill category cards, each with
+   a list of technology tags.
+   ========================================= */
+
+.skills {
+  background: var(--bg-gray);
+}
+
+/* Grid of skill cards — 3 columns on desktop */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Individual skill card */
+.skill-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Icon + category name row */
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Icon circle */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.skill-category {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Wrapping row of tech tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Individual tag */
+.skill-tag {
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  color: var(--text-mid);
+}
+
+/* 2 columns on tablet, 1 on mobile */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

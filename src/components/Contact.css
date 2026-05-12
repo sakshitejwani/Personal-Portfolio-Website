@@ -1,0 +1,200 @@
+/* =========================================
+   CONTACT STYLES — Contact.css
+   Two-column: contact info links on left,
+   message form on right.
+   ========================================= */
+
+.contact {
+  background: var(--bg);
+}
+
+/* Two-column grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ---- Left column ---- */
+.contact-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.contact-intro {
+  color: var(--text-mid);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* List of contact method cards */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+  color: var(--text-dark);
+}
+
+.contact-method:hover {
+  border-color: var(--blue);
+}
+
+/* Icon circle */
+.contact-method-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--blue-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--blue); /* SVG icons inherit this teal color */
+}
+
+.contact-method-info strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.contact-method-info span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* ---- Right column — Form ---- */
+.contact-form-card {
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.contact-form-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Row with two inputs side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Single input or textarea group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin-bottom: 0.35rem;
+}
+
+/* Required field asterisk */
+.form-group label span {
+  color: var(--blue);
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical; /* User can drag to resize vertically */
+}
+
+/* Submit button — full width */
+.form-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-submit:hover {
+  background: var(--blue-dark);
+}
+
+/* Disabled state while email is sending */
+.form-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Success message shown after email sends */
+.form-success {
+  margin-top: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  color: #166534;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Error message shown if sending fails */
+.form-error {
+  margin-top: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  color: #991b1b;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

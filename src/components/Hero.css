@@ -1,0 +1,123 @@
+/* =========================================
+   HERO STYLES — Hero.css
+   Full-screen hero with dark image background,
+   your name, title, and CTA buttons.
+   ========================================= */
+
+.hero {
+  /* Space at top so content isn't hidden behind the fixed navbar */
+  padding-top: 80px;
+}
+
+/* Dark banner with background image */
+.hero-banner {
+  background-color: #0f172a;   /* Dark fallback if image doesn't load */
+
+  /*
+    Using your own background.png from the /public/assets folder.
+    The dark gradient on top makes the white text readable.
+  */
+  background-image:
+    linear-gradient(to bottom, rgba(10,15,35,0.55), rgba(10,15,35,0.88)),
+    url('/assets/background.png');
+  background-size: cover;
+  background-position: center;
+
+  padding: 5rem 2rem;
+  border-radius: 16px;
+  margin: 1.5rem 2rem;
+}
+
+.hero-banner .container {
+  max-width: 800px;
+}
+
+/* Big name heading */
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive font size */
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+/* Title/role line */
+.hero-title {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Short description */
+.hero-desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Row of CTA buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Override the outline button for dark background */
+.hero-buttons .btn-outline {
+  color: white;
+  border-color: white;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ---- Stats row below the banner ---- */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--blue);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+.stat-sub {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-top: 0.1rem;
+}
+
+/* Stack stats on mobile */
+@media (max-width: 640px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-banner {
+    margin: 1rem;
+    padding: 3rem 1.5rem;
+  }
+}

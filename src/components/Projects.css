@@ -1,0 +1,152 @@
+/* =========================================
+   PROJECTS STYLES — Projects.css
+   Featured project banner + grid of cards.
+   ========================================= */
+
+.projects {
+  background: var(--bg-gray);
+}
+
+/* ---- Featured project (full width banner) ---- */
+.featured-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.featured-project {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: white;
+  margin-bottom: 2.5rem;
+}
+
+/* Colored banner image area — teal gradient */
+.featured-img {
+  height: 200px;
+  background: linear-gradient(135deg, #134e4a, #0d9488);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Type badge (e.g. "Publication") */
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--blue);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.featured-body {
+  padding: 1.5rem;
+}
+
+.featured-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.featured-desc {
+  color: var(--text-mid);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ---- Regular project cards grid ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.project-card-img {
+  height: 140px;
+  background: linear-gradient(135deg, #0f2c2b, #134e4a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.project-card-body {
+  padding: 1.25rem;
+}
+
+.project-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-card-desc {
+  color: var(--text-light);
+  font-size: 0.83rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Tech stack tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-tech span {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* Links row */
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  font-size: 0.8rem;
+  color: var(--blue);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.project-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

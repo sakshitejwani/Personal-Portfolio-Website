@@ -1,0 +1,184 @@
+/* =========================================
+   GLOBAL STYLES — index.css
+   This file sets up fonts, colors, and base
+   styles used across the entire portfolio.
+   ========================================= */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables — change these to restyle everything */
+:root {
+  --blue: #0d9488;
+  --blue-light: #f0fdfa;
+  --blue-dark: #0f766e;
+  --text-dark: #111827;
+  --text-mid: #374151;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --bg-gray: #f9fafb;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ---- Dark mode variables ----
+   When the <html> element has class "dark",
+   these values OVERRIDE the ones above.
+   Every component uses var(--bg), var(--text-dark) etc.
+   so the whole site switches automatically. */
+.dark {
+  --text-dark: #f9fafb;
+  --text-mid: #d1d5db;
+  --text-light: #9ca3af;
+  --border: #374151;
+  --bg: #111827;
+  --bg-gray: #1f2937;
+  --blue-light: #0d3d3a;
+}
+
+/* Switch body background in dark mode */
+.dark body {
+  background: var(--bg);
+  color: var(--text-dark);
+}
+
+/* Switch white cards to dark surface in dark mode */
+.dark .card,
+.dark .skill-card,
+.dark .exp-card,
+.dark .edu-card,
+.dark .project-card,
+.dark .featured-project,
+.dark .contact-form-card,
+.dark .stat-card,
+.dark .contact-method {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+/* Reset — removes default browser spacing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base font settings */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default list styles */
+ul {
+  list-style: none;
+}
+
+/* Images fill their container */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- Reusable utility classes ---- */
+
+/* Container — centers content and limits max width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section padding — used on every section */
+.section {
+  padding: 5rem 0;
+}
+
+/* Section heading style */
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-title span {
+  color: var(--blue);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+/* Blue pill/badge */
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  background: var(--bg);
+}
+
+/* Blue outlined button */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-outline:hover {
+  background: var(--blue-light);
+}
+
+/* Card style */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
