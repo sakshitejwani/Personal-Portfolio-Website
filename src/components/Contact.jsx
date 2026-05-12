@@ -2,9 +2,9 @@ import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-const EMAILJS_SERVICE_ID  = 'service_ine33ie';   
-const EMAILJS_TEMPLATE_ID = 'template_0rf68qe';  
-const EMAILJS_PUBLIC_KEY  = 'Pp0KE_T7Ui6incZWM';   
+const EMAILJS_SERVICE_ID  = '';   
+const EMAILJS_TEMPLATE_ID = '';  
+const EMAILJS_PUBLIC_KEY  = '';   
 
 
 
