@@ -41,7 +41,7 @@ npm install
 npm run dev
 ```
 
-Then open your browser and go to: **http://localhost:5173**
+Then open your browser and go to: **https://personal-portfolio-website-eight-omega.vercel.app**
 
 
 
