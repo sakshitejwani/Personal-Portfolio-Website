@@ -81,7 +81,7 @@ function Navbar() {
 
           {/* Resume button — hidden on mobile */}
           <a
-            href="/Sakshi_Tejwani_Resume_apr.pdf"
+            href="/assets/Sakshi_Tejwani_Resume_apr.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar-resume"
@@ -131,7 +131,7 @@ function Navbar() {
           ))}
           <li>
             <a
-              href="/Sakshi_Tejwani_Resume_apr.pdf"
+              href="/assets/Sakshi_Tejwani_Resume_apr.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavClick}
